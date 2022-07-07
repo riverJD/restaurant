@@ -1,0 +1,31 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "restaurant page for the odin project",
+  "main": "index.js",
+  "scripts": {
+    "test": "(testit)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riverJD/restaurant.git"
+  },
+  "keywords": [
+    "restaurant",
+    "odin"
+  ],
+  "author": "river",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riverJD/restaurant/issues"
+  },
+  "homepage": "https://github.com/riverJD/restaurant#readme",
+  "dependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1"
+  }
+}

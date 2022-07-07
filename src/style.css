@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(255, 254, 241);
+    background: url(./bluebird.png);
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+  
+}
+
+#main-image{
+   
+    border: 5px dotted green;
+    height: auto;
+    width: 400px;
+}
+
