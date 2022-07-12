@@ -4,10 +4,10 @@
   "description": "restaurant page for the odin project",
   "main": "index.js",
   "scripts": {
-    "test": "(testit)"
+    "build": "webpack"
   },
   "repository": {
-    "type": "git",
+    "type": "echo \"Error: no test specified\" && exit 1",
     "url": "git+https://github.com/riverJD/restaurant.git"
   },
   "keywords": [
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1"
   }
 }

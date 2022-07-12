@@ -1,6 +1,10 @@
+:root{
+    --background-color:  rgb(255, 254, 241);
+}
+
 body{
     background-color: rgb(255, 254, 241);
-    background: url(./bluebird.png);
+   
     display: flex;
     flex-direction: column;
     align-items:  center;
@@ -14,3 +18,15 @@ body{
     width: 400px;
 }
 
+.logo{
+
+    height: 300px;
+    width: 300px;
+    display: flex;
+
+}
+
+#header{
+    display: flex;
+    outline: 1px dotted red;
+}

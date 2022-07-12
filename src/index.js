@@ -1,32 +1,13 @@
 import './style.css';
-import bird from './bluebird.png'
+import build from './buildpage.js';
 // Create website layout
 
 console.log("Test")
 
-const content = document.querySelector("#content");
-
-const mainImage = new Image();
-mainImage.src = bird;
-
-const imageDiv = document.createElement('div');
-
-imageDiv.id = 'main-image';
-
-content.appendChild(imageDiv);
-
-console.log(content);
-
-const element = (type) => {
-
-    return document.createElement(`${type}`);
-
-}
+build();
 
 
 
-
-content.textContent = "Hmm";
 
 console.log(":)")
 console.log(content)
