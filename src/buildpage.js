@@ -1,5 +1,7 @@
 import bird from './bluebird.png'
+import blackbird from './blackbird.png'
 import setAttributes from './utilities.js';
+
 
 // Create website layout
 
@@ -68,8 +70,31 @@ const build = () => {
         
     content.appendChild(buildHeader())
     
+    const buildMain = () => {
+
+        const tempText = "Welcome to bluebird.";
+
+        const second = " Et malesuada fames ac turpis egestas maecenas pharetra convallis. Arcu non sodales neque sodales. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae.";
+
+        const tempBig = "Mattis rhoncus urna neque viverra justo nec ultrices dui. At auctor urna nunc id cursus metus. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. " 
+        const main = element('div', {"id": "main-content", "class": "main",});
+        const mainText = element('div', {"id": "main-text", "class": "main",});
+        const secondText = element('div', {"id": "second-text", "class": "main",});
+        const bbird = element('img', {"width": "100px"});
+        bbird.src = blackbird;
+
+        mainText.textContent = tempBig;
+        secondText.textContent = second;
+        main.appendChild(mainText);
+        main.appendChild(secondText);
+        main.appendChild(bbird);
+
+        return main;
 
 
+    }
+
+    content.appendChild(buildMain());
 
     console.log(content);
 
