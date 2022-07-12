@@ -13,7 +13,7 @@ body{
 }
 
 #content{
-    outline: 1px dotted black;
+    
     height: 100vh;
     width:  max(330px, 70vw);
 }

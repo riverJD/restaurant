@@ -6,7 +6,7 @@ import menu from './menu.json';
 
 build();
 
-/// Move to seperate module, dynamically loads menu items
+/// Move to seperate
 
 const main = document.querySelector("#main-content");
 const menuContent = document.createElement("div");
