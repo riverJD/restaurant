@@ -7,7 +7,5 @@ console.log("Test")
 build();
 
 
-
-
-console.log(":)")
+console.log(":g)")
 console.log(content)
