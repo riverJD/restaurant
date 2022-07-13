@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="menubuilder.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arima:wght@300&display=swap');
+        </style>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Builder</title>
+</head>
+<body>
+    <script src="buildmenu.js" defer></script>
+    <form class="form-container" id="build-menu-form" action="">
+        <label for="name" class="form-label">Name:<input type="text" class="form-element" name="name" id="dish-name" placeholder="grape pie" required></label>
+        <label for="description" class="form-label">Desc:<input type="text" class="form-element" name="description" id="dish-description" placeholder="mustang grapes, walnut, rum crust required"></label>
+        <label for="price" class="form-label" id="page-label">Price:<input type="number" class="form-element" name="price" id="dish-price" placeholder="12" required></label>
+        <label for="note" class="form-label">notes:<input type="text" class="form-element" name="note" id="dish-note" placeholder="seasonal" required></label>               
+
+        <fieldset>
+            <legend>modifiers?</legend>
+        <label for="gluten" class="form-label" id="gluten-label">gluten<input type="checkbox" class="form-element" name="gluten" id="has-gluten"></label>
+        <label for="spicy" class="form-label" id="gluten-label">spicy<input type="checkbox" class="form-element" name="spicy" id="has-spicy"></label>
+
+        </fieldset>
+        <input type="submit" id="submit-menu" value="add dish to menu">
+    
+    </form>
+</body>
+</html>

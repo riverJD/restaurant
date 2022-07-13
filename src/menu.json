@@ -1,20 +1,67 @@
-
-
 {"dishes":[
-    
-    {"dish": "grape pie" ,
-    "type": "dessert",
-    "description": "mustang grapes, walnut, rum crust",
-    "price": 9,
-    "symbols": "",
-    "note": "seasonal"
+      
+    {"name": "happy goat",
+    "type": "starter",
+    "description": "crusty bread, goat cheese two ways, blueberry jam",
+    "price": 12,
+    "symbols": "gluten",
+    "note": ""
     },
 
-    {"dish": "" ,
-    "type": "",
-    "description": "",
-    "price": "",
+    {"name": "the taco",
+    "type": "starter",
+    "description": "wild mushroom, fresh cheese, habanero salsa",
+    "price": 8,
     "symbols": "",
     "note": ""
+    },
+
+    {"name": "nest",
+    "type": "starter",
+    "description": "quail eggs, woodsmoke, dewberry reduction",
+    "price": 25,
+    "symbols": "gluten",
+    "note": ""
+    },
+
+    {"name": "carrot",
+    "type": "main",
+    "description": "stuffed pasta, mashed carrot, sweet potato and pumpkin sauce",
+    "price": 21,
+    "symbols": "gluten",
+    "note": ""
+    },
+
+    {"name": "smoked tofu",
+    "type": "main",
+    "description": "blackened corn, soured cream",
+    "price": 22,
+    "symbols": "gluten",
+    "note": ""
+    },
+
+
+    {"name": "three pepper",
+    "type": "main",
+    "description": "stuffed sweet pepper with charred jalapeno, wild chiltepin",
+    "price": 19,
+    "symbols": "spicy",
+    "note": ""
+    },
+    
+    {"name": "grape pie",
+    "type": "dessert",
+    "description": "mustang grapes, walnut, rum crust",
+    "price": 12,
+    "symbols": "gluten",
+    "note": " "
+    },
+
+    {"name": "ginger ice cream" ,
+    "type": "dessert",
+    "description": "blueberries, cinnamon cake",
+    "price": 9,
+    "symbols": "gluten",
+    "note": " "
     }
 ]}
