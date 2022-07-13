@@ -1,6 +1,8 @@
 :root{
     --background-color:  rgb(255, 254, 241);
     --birdblue: #121e6a;
+    --birdlavender: #bebfd4;
+    
     
 }
 
@@ -184,8 +186,38 @@ h1, h2, h3, p{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+.page{
+    display: flex;
+    justify-content: center;
+}
+
 #page-header{
     margin-top: 10%;
     font-weight: 200;
     font-style: italic;
+}
+
+#form-container{
+    margin-top: 10%;
+    width: min(400px, 100%);
+    display: flex;
+    justify-content: center;
+    border: 3px solid var(--birdblue, black);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px;
+    background-color: var(--birdlavender, rgb(222, 196, 247));
+    padding: 10px;
+}
+
+.form-label{
+    display: flex;
+    flex-direction: column;
+    color: var(--birdblue, black);
+}
+
+.form-input{
+    background-color: var(--background-color, white);
+    border: 3px solid var(--birdblue, black);
+    border-radius: 5px;
+    width: min(90%, 14rem);
 }
