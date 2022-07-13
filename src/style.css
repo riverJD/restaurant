@@ -192,7 +192,7 @@ h1, h2, h3, p{
 .page{
     display: flex;
     justify-content: center;
-    margin-bottom: 30%;
+    margin-bottom: 15%;
 }
 
 #page-header{

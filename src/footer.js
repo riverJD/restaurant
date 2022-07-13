@@ -38,7 +38,7 @@ const buildFooter = () => {
     footerContent.appendChild(phone);
 
     // Create links
-    const rivLink = createImageLink("https://riverjd.github.io/admin-page/", river, "river's admin page");
+    const rivLink = createImageLink("https://riverjd.github.io/admin-page/", river, "river's admin page", "River icons created by Freepik - Flaticon");
     const footerNote = element("div", {"id": "footer-note"})
     footerNote.textContent = "river ©2022"
     const gitLink = createImageLink("https://github.com/riverJD/", gitlogo, "river's github");

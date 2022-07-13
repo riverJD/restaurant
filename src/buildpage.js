@@ -86,7 +86,7 @@ const build = (() => {
             page = buildContact();
         }
         if (source === 'story'){
-            page = buildStory();
+            page = buildMain();
         }
 
         if (source === 'main'){
