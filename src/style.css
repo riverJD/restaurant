@@ -36,6 +36,8 @@ h1, h2, h3, p{
 .logo{
    
     width: max(80px, 20vw);
+    max-width: 300px;
+
     height: auto;
     display: flex;
     
@@ -61,7 +63,7 @@ h1, h2, h3, p{
 
     text-align: center;
     font-size: 18px;
-   
+    max-width: 800px;
 
 }
 
@@ -197,6 +199,7 @@ h1, h2, h3, p{
     font-style: italic;
     font-size: clamp(1em, 10vw, 3.2rem);
     
+    
 }
 
 #form-container{
@@ -274,25 +277,49 @@ h1, h2, h3, p{
 
 #main-page{
     display: grid;
+    max-width: 800px;
+    justify-self: center;
+    
+}
+#content{
+    display: flex;;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page-content{
     margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 
 }
+
+
+
 
 .photo{
     margin: 10px;
-    width: min(90%, 350px);
+    width: min(90%, 300px);
     height: auto;
-    border: #121e6a  solid;
-    border-radius: 10px;
+    max-height: 260px;
+
+    border-radius: 4px;
 }
 
 .text-content{
-    align-self: center;
+   
     font-style: italic;
+    max-width: 80%;
+    text-align: center;
+
+    grid-column-end: -1;
+        
 }
 
+
+
+.no-photo{
+    grid-template-columns: 1fr;
+    text-align: right;
+}

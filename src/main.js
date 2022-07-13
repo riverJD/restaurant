@@ -1,6 +1,8 @@
 import { element } from './utilities.js';
-import farmData from './farm.jpg';
+import tableDData from './table.jpg';
 import birdData from './farmbird.jpg';
+import farmTextData from './farmtext.txt';
+import welcomeTextData from './welcome.txt';
 
 
 const buildMain = () => {
@@ -12,25 +14,33 @@ const buildMain = () => {
     pageHeader.textContent = "welcome to bluebird"
 
     // Create a section of content, with text and image (optional);    
-    const createContent = (name, content, photo) => {
+    const createContent = (name, content, photo, first) => {
 
         const container = element('div', {"class": "page-content", 'id': `${name}-content`});
         const text = element('div', {"class": "text-content content", "id": `${name}-text`});
         text.textContent = content;
 
-        if (photo != null){
 
+
+        if (photo != null){
             const picture = element('img', {"class": "photo", "id": `${name}-photo`, "src": photo})
             container.appendChild(picture);
         }
+        else{
+            container.classList.add("no-photo");
+        }
         
+        if (first === 'text'){
+            console.log(first);
+            text.classList.add('first')
+        }
         container.appendChild(text);
         return container;
     }
 
-    const farmtext = "A number of wild bluebirds call our farm home, and we've taken inspiration from them in our dishes developed right from our garden." 
-    const test = createContent("test", "This is a test, did it work?");
-    const farm = createContent("farm",farmtext, birdData);
+    const welcome = createContent("welcome", welcomeTextData);
+    const table = createContent("table", "Our space is very limited, and reservations are required. Please call ahead if you have any specific dietary restrictions.", tableDData)
+    const farm = createContent("farm",farmTextData, birdData, "text");
     // farm contents
     /* const farmContent = element('div', {"class": 'page-content', "id": "farm-content"});
     const farm = element('img', {"class": "photo", "id": "farm-photo", "src": birdData});
@@ -41,8 +51,9 @@ const buildMain = () => {
     
    
     page.appendChild(pageHeader);
+    page.appendChild(welcome);
     page.appendChild(farm);
-    page.appendChild(test);
+    page.appendChild(table);
     page.id = "main-page";
 
 
