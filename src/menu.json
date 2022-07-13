@@ -17,7 +17,7 @@
     },
 
     {"name": "nest",
-    "type": "starter",
+    "type": "main",
     "description": "quail eggs, woodsmoke, dewberry reduction",
     "price": 25,
     "symbols": "gluten",
@@ -31,6 +31,8 @@
     "symbols": "gluten",
     "note": ""
     },
+
+    
 
     {"name": "smoked tofu",
     "type": "main",
@@ -49,6 +51,8 @@
     "note": ""
     },
     
+  
+
     {"name": "grape pie",
     "type": "dessert",
     "description": "mustang grapes, walnut, rum crust",
@@ -64,4 +68,6 @@
     "symbols": "gluten",
     "note": " "
     }
+
+  
 ]}

@@ -165,3 +165,27 @@ h1, h2, h3, p{
 .menu-symbol{
     grid-area: symbols;
 }
+
+
+.pictures{
+   
+    border-radius: 5px;
+}
+#table-image{
+    height: auto;
+    width: 300px;
+}
+
+
+#story-page{
+    
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+#page-header{
+    margin-top: 10%;
+    font-weight: 200;
+    font-style: italic;
+}

@@ -2,6 +2,10 @@ import bird from './bluebird.png'
 import blackbird from './blackbird.png'
 import { element } from './utilities.js';
 import { buildMenu }  from './menu.js';
+import { buildContact} from './contact.js';
+import { buildStory } from './story';
+import { buildMain } from './main';
+
 
 
 // Create website layout
@@ -26,11 +30,11 @@ const build = (() => {
         
         // sub-titles
 
-        const title = element('div', {"class": "title", "id": "title-header"});
+        const title = element('button', {"class": "title", "id": "title-header"});
         const logo = element('div', {"class": "logo"});
-        const menu = element('button', {"id": "menu-header", "class": "header-link"});
-        const contact = element('button', {"id": "contact-header", "class": "header-link"});
-        const story = element('button', {"id": "story-header", "class": "header-link"});
+        const menu = element('button', {"id": "menu-button", "class": "header-link"});
+        const contact = element('button', {"id": "contact-button", "class": "header-link"});
+        const story = element('button', {"id": "story-button", "class": "header-link"});
        
            
         title.textContent = titleText;
@@ -63,6 +67,8 @@ const build = (() => {
   
     content.appendChild(buildHeader())
     
+  
+
     const buildTemp = () => {
 
         const tempText = "Welcome to bluebird.";
@@ -86,25 +92,42 @@ const build = (() => {
 
     }
 
-    const buildMain = () => {
+ 
 
-        const menu = buildMenu();
+    const buildPage = (source) => {
+        // clear page
 
-        console.log("..")
-        console.log(menu)
-        return menu;
+        console.log(source)
+        if (content.children.length > 1) content.removeChild(content.lastElementChild); 
+        let page;
+        
+        if (source === 'menu'){
+            page = buildMenu();   
+           
+        }
+        if (source === 'contact'){
+            page = buildContact();
+        }
+        if (source === 'story'){
+            page = buildStory();
+        }
+
+        if (source === 'main'){
+            page = buildMain();
+        }
+
+
+        content.appendChild(page);
+        
     }
 
-
-
-
-
-    content.appendChild(buildMain());
+    buildPage('main');
+   
 
     console.log(content);
 
     
-    return {buildHeader, buildMain}
+    return {buildPage}
 // Creates a new element and flexibly assignes attributes;
 
 

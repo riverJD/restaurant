@@ -10,6 +10,7 @@ const buildMenu = () => {
     const menuHeader = element('h1', {"class": "menu-header"});
     menuHeader.textContent = "menu"
 
+    // menu categories
     const starter = element('div', {"id": "starters"});
     const starterHeader = element('h2', {"id": "starter-header", "class": "menu-subheader"})
     starterHeader.textContent = "starter"
@@ -31,6 +32,7 @@ const buildMenu = () => {
     menu.appendChild(main);
     menu.appendChild(dessert);
 
+    // read dish from JSON
     const buildDish = (item) => {
 
         const dish = element('div', {"class": "menu-dish "});
@@ -53,20 +55,20 @@ const buildMenu = () => {
         dish.appendChild(symbol);
 
                 
-        console.log(dish);
+      
 
         return dish;
         
     }
 
-
     for (let item of menuData.dishes){
-        console.log(item.name);
-    
-        switch(item.type) {
 
+        // Attach menu items to appropriate category
+        switch(item.type) {
+           
+  
             case 'starter':
-                console.log('starter')
+                
                 starter.appendChild(buildDish(item));
                 continue;
 
@@ -74,17 +76,18 @@ const buildMenu = () => {
                 main.appendChild(buildDish(item));
                 continue;
             case 'dessert':
+                console.log(item.description)
                 dessert.appendChild(buildDish(item));
-                
-            
-      
+                continue;    
+     
+            default: 
+            console.log("menu item did not match know category, verify dish type")
+        
+            break;
         }
-    console.log(menu);
-    
-
-
-    return menu;
 }
+
+return menu;
 
 }
 
