@@ -1,0 +1,38 @@
+{"hours": [
+
+    {"day": "sunday",
+    "open": "12:00PM",
+    "close": "09:00PM"
+    },
+
+    {"day": "monday",
+    "open": "closed",
+    "close": "closed"
+    },
+    
+    {"day": "tuesday",
+    "open": "closed",
+    "close": "closed"
+    },
+    
+    {"day": "wednesday",
+    "open": "04;00PM",
+    "close": "09:00PM"
+    },
+    
+    {"day": "thursday",
+    "open": "04:00PM",
+    "close": "09:00PM"
+    },
+
+    {"day": "friday",
+    "open": "04:00PM",
+    "close": "10:00PM"
+    },
+    
+    {"day": "saturday",
+    "open": "12:00PM",
+    "close": "10:00PM"
+    }
+    
+]}

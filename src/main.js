@@ -14,15 +14,14 @@ const buildMain = () => {
     pageHeader.textContent = "welcome to bluebird"
 
     // Create a section of content, with text and image (optional);    
-    // Elements will be dynamically clased and id based on name.  
+    // Elements will be dynamically classed and id based on name.  
     // content is a source of text content for the section
     // firstElement is string name of element which will be placed to the left
     const createContent = (name, content, photo, firstElement) => {
 
         const container = element('div', {"class": "page-content", 'id': `${name}-content`});
         const text = element('div', {"class": "text-content content", "id": `${name}-text`});
-        text.textContent = content;
-
+        text.innerHTML = content;
 
         container.appendChild(text);
 
@@ -35,7 +34,6 @@ const buildMain = () => {
             else {
             container.appendChild(picture);
             }
-
 
         }
         else{
@@ -51,7 +49,7 @@ const buildMain = () => {
     }
 
     const welcome = createContent("welcome", welcomeTextData);
-    const table = createContent("table", "Our space is very limited, and reservations are required. Please call ahead if you have any specific dietary restrictions.", tableDData)
+    const table = createContent("table", "Our space is <b>very limited</b>, and <em>reservations are required</em>. Please <b>call ahead</b> if you have any specific dietary restrictions.", tableDData)
     const farm = createContent("farm",farmTextData, birdData, "photo");
     // farm contents
     /* const farmContent = element('div', {"class": 'page-content', "id": "farm-content"});
@@ -69,8 +67,6 @@ const buildMain = () => {
     page.id = "main-page";
 
 
-
-    console.log(page);
     return page;
 
 }

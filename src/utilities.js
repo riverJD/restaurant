@@ -31,7 +31,7 @@ const getDate = () => {
 
 const formatPhone = (input) => {
     const phoneFormater = input;
-    console.log
+    
     phoneFormater.addEventListener('keyup', (e) => {
 
         // Remove anything that isn't a number
@@ -64,7 +64,18 @@ function setAttributes(element, attributes)
     });
 }
 
+function createImageLink(url, image, alt){
+
+    
+    const ahref = createElement("a", {"class": "link", "href": url});
+    const linkImage = createElement("img", {"class": "image-link", "src": image, "alt": alt});
+
+    ahref.appendChild(linkImage);
+
+    return ahref;
+    
+
+}
 
 
-
-export {formatPhone, getDate, setAttributes, createElement as element};
+export {formatPhone, getDate, setAttributes, createElement as element, createImageLink};

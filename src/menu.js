@@ -6,7 +6,7 @@ import { element } from './utilities.js';
 //console.log(menuData.dishes);
 const buildMenu = () => {
     
-    const menu = element('div', {"id": "menu"});
+    const menu = element('div', {"id": "menu", "class": "page"});
     const menuHeader = element('h1', {"class": "menu-header"});
     menuHeader.textContent = "menu"
 

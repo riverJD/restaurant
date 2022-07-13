@@ -5,6 +5,7 @@ import { buildMenu }  from './menu.js';
 import { buildContact} from './contact.js';
 import { buildStory } from './story';
 import { buildMain } from './main';
+import buildFooter from './footer';
 
 
 
@@ -70,36 +71,11 @@ const build = (() => {
     
   
 
-    const buildTemp = () => {
-
-        const tempText = "Welcome to bluebird.";
-
-        const second = " Et malesuada fames ac turpis egestas maecenas pharetra convallis. Arcu non sodales neque sodales. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae.";
-
-        const tempBig = "Mattis rhoncus urna neque viverra justo nec ultrices dui. At auctor urna nunc id cursus metus. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. " 
-        const main = element('div', {"id": "main-content", "class": "main",});
-        const mainText = element('div', {"id": "main-text", "class": "main",});
-        const secondText = element('div', {"id": "second-text", "class": "main",});
-        const bbird = element('img', {"width": "100px"});
-        bbird.src = blackbird;
-
-        mainText.textContent = tempBig;
-        secondText.textContent = second;
-        main.appendChild(mainText);
-        main.appendChild(secondText);
-        main.appendChild(bbird);
-
-        return main;
-
-    }
-
- 
-
     const buildPage = (source) => {
         // clear page
 
-        console.log(source)
-        if (content.children.length > 1) content.removeChild(content.lastElementChild); 
+       
+        while (content.children.length > 1) content.removeChild(content.lastElementChild); 
         let page;
         
         if (source === 'menu'){
@@ -117,15 +93,18 @@ const build = (() => {
             page = buildMain();
         }
 
-
+        
         content.appendChild(page);
+        content.appendChild(buildFooter());
         
     }
 
     buildPage('main');
    
+   
 
-    console.log(content);
+    // Construct footer for hours, contact info, etc
+
 
     
     return {buildPage}
