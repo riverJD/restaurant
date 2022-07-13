@@ -3,7 +3,6 @@ import { element } from './utilities.js';
 
 
 
-//console.log(menuData.dishes);
 const buildMenu = () => {
     
     const menu = element('div', {"id": "menu", "class": "page"});
@@ -54,37 +53,31 @@ const buildMenu = () => {
         dish.appendChild(note);
         dish.appendChild(symbol);
 
-                
-      
-
         return dish;
         
     }
 
+    // build menu from dishes
     for (let item of menuData.dishes){
 
         // Attach menu items to appropriate category
         switch(item.type) {
-           
-  
+        
             case 'starter':
-                
                 starter.appendChild(buildDish(item));
                 continue;
-
             case 'main':
                 main.appendChild(buildDish(item));
                 continue;
             case 'dessert':
-                console.log(item.description)
                 dessert.appendChild(buildDish(item));
                 continue;    
      
             default: 
-            console.log("menu item did not match know category, verify dish type")
+            console.warn("menu item did not match known category, verify dish type")
         
             break;
-        }
+        }cccc
 }
 
 return menu;
