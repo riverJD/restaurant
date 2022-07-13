@@ -1,6 +1,6 @@
 import bird from './bluebird.png'
 import blackbird from './blackbird.png'
-import { element } from './utilities.js';
+import { element, getDate } from './utilities.js';
 import { buildMenu }  from './menu.js';
 import { buildContact} from './contact.js';
 import { buildStory } from './story';
@@ -18,6 +18,7 @@ const build = (() => {
 
     const content = document.querySelector("#content");
     
+    getDate();
 
     const buildHeader = () => {
         
